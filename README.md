@@ -10,7 +10,8 @@ The migration project involved transferring data from Active Directory in Window
 - Proxmox VE 7
 - Zentyal 7
 - AD Pro Toolkit
-- User State Migration Tool
+- User State Migration Tool (USMT)
+- Power Shell
 
 ## Operating Systems Used
 
@@ -30,8 +31,15 @@ The migration project involved transferring data from Active Directory in Window
     - Configure the network interface(s) with a static IP(s)
     - Configure as a Standalone Server and set the domain name
 - Active Directory OU, Group, and User migration
-    - Install AD Pro Toolkit on a Windows client machine
-    - 
+    - Install AD Pro Toolkit on a Windows client machine existing in the old domain
+    - Use AD Pro Toolkit to export all OUs, users, and groups to csv
+    - Join windows client machine to new domain
+    - Use AD Pro Toolkit import all Ous, users, and groups from the csv
+    - Verify user counts on all objects using a Power Shell 
+- Desktop migration
+    - Join all existing client machines to the new domain
+    - Use USMT to migrate local user data from the old domain's user profile to the new domain's user profile
+    
 
 <h2>Architecture Diagram</h2>
 
