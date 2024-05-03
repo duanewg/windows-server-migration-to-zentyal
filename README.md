@@ -39,6 +39,9 @@ The migration project involved transferring data from Active Directory in Window
 - Desktop migration
     - Join all existing client machines to the new domain
     - Use USMT to migrate local user data from the old domain's user profile to the new domain's user profile
+- Decommissioning
+    - Created a back of old domain controller using Proxmox
+    - Deleted old virutal machine containing the domain controller to free resoureces
     
 
 <h2>Architecture Diagram</h2>
